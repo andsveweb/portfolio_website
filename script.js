@@ -110,3 +110,41 @@ scrollBottom.forEach((el) =>observer.observe(el));
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el) =>observer.observe(el));
 
+// function for pop upp service boxes
+
+document.addEventListener("DOMContentLoaded", function () {
+    const readMoreLinks = document.querySelectorAll(".read-more");
+    const modalOverlay = document.querySelector(".modal-overlay");
+    const modalPopup = document.querySelector(".modal-popup");
+    const modalClose = document.querySelector(".modal-close");
+    const modalInnerContent = document.querySelector(".modal-inner-content");
+
+    readMoreLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const serviceBox = link.closest(".service-box");
+            const hiddenContent = serviceBox.querySelector(".hidden-content");
+            const serviceTitle = serviceBox.querySelector("h3").textContent;
+            const serviceText = hiddenContent.innerHTML;
+
+            modalInnerContent.innerHTML = `
+                <h3>${serviceTitle}</h3>
+                <div>${serviceText}</div>
+            `;
+
+            modalOverlay.style.display = "block";
+            modalPopup.style.display = "block";
+        });
+    });
+
+    modalClose.addEventListener("click", closeModal);
+    modalOverlay.addEventListener("click", closeModal);
+
+    function closeModal() {
+        modalOverlay.style.display = "none";
+        modalPopup.style.display = "none";
+    }
+});
+
+
+
