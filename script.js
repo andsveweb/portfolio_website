@@ -110,7 +110,7 @@ scrollBottom.forEach((el) =>observer.observe(el));
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el) =>observer.observe(el));
 
-// function for pop upp service boxes
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const readMoreLinks = document.querySelectorAll(".read-more");
@@ -145,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
         modalPopup.style.display = "none";
     }
 });
+
 
 
 

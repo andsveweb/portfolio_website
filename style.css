@@ -278,9 +278,7 @@ section {
 
 
 
-.liquid-shape:nth-child(2) {
-    filter: blur(50px)
-}
+
 
 .about{
     display: flex;
@@ -442,9 +440,7 @@ section {
     line-height: 1.6;
 }
 
-.skills {
-    background: var(--secon-bg-color);
-}
+
 
 .skill-main {
     width: 70%;
@@ -455,10 +451,9 @@ section {
     margin-bottom: 1rem;
 }
 
-.skill-main h3{
-    margin-bottom: 1rem;
-    font-size: var(--normal-font);
-    text-align: center;
+.skill-bar p {
+    font-size: 14px;
+    
 }
 
 .skill-left .skill-bar .info {
@@ -470,8 +465,8 @@ section {
 
 .skill-left .skill-bar .bar{
     width: 100%;
-    height: 3px;
-    background-color: var(--bg-color);
+    height: 2px;
+    
     border-radius: 25px;
     margin-top: 10px;
     position: relative;
@@ -488,11 +483,11 @@ section {
 }
 
 .skill-bar .bar .html{
-    width: 85%;
+    width: 80%;
     animation: html 3s;
 }
 .skill-bar .bar .adobexd{
-    width: 78%;
+    width: 50%;
     animation: adobexd 3s;
 }
 .skill-bar .bar .javascript{
@@ -500,24 +495,28 @@ section {
     animation: javascript 3s 
 }
 .skill-bar .bar .vuejs{
-    width: 60%;
+    width: 50%;
     animation: vuejs 3s 
 }
 .skill-bar .bar .css{
-    width: 80%;
+    width: 75%;
     animation: css 3s;
 }
 .skill-bar .bar .java{
-    width: 70%;
+    width: 65%;
     animation: java 3s;
 }
 .skill-bar .bar .php{
-    width: 65%;
+    width: 40%;
     animation: java 3s;
 }
 .skill-bar .bar .python{
     width: 50%;
     animation: java 3s;
+}
+.skill-bar .bar .kotlin{
+    width: 30%;
+    animation: kotlin 3s;
 }
  
 .professional {
@@ -551,29 +550,6 @@ section {
     font-weight: 600;
 }
 
-.circle {
-    width: 100%;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.circle .points{
-    width: 2px;
-    height: 10px;
-    background-color: var(--bg-color);
-    position: absolute;
-    border-radius: 3px;
-    transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
-    
-}
-
-.points.marked{
-    animation: glow 0.04s linear forwards;
-    animation-delay: calc(var(--i)*0.05s);
-}
 
 .fillter-buttons {
     margin: 2rem;
@@ -601,6 +577,7 @@ section {
     gap:2rem;
 }
 
+
 .port-box{
     position: relative;
     border-radius: 15px;
@@ -611,6 +588,8 @@ section {
     align-items: center;
     border: 2px solid var(--hover-color);
     box-shadow: var(--neon-box-shadow);
+    min-height: 280px;
+    max-height: 280px;
 
 }
 
@@ -657,6 +636,7 @@ section {
 .port-content h3{
     font-size: 1.5rem;
     font-weight: 600;
+    
 }
 
 .port-content p{
@@ -767,7 +747,7 @@ footer a i{
     transform: translateX(0);
 }
 
-/* Add this CSS to your existing stylesheet */
+
 .hidden-content {
     display: none;
     padding: 10px;
@@ -780,7 +760,7 @@ footer a i{
     z-index: 1;
 }
 
-/* Add this CSS to your existing stylesheet */
+
 .modal-overlay {
     position: fixed;
     top: 0;
