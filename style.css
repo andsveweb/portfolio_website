@@ -34,6 +34,8 @@
     border-radius: 5rem;
 }
 
+
+
 .cursor-light {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0) 100%);
     
@@ -90,6 +92,7 @@ header.sticky{
     font-size: 26px;
     font-weight: 700;
     letter-spacing: 1px;
+    color: var(--hover-color);
 }
 span {
     color: var(--hover-color);
@@ -616,6 +619,25 @@ footer a i{
     transition: all 2s;
     padding-top: 40px;
     
+}
+
+.scrollbutton { 
+    display: none; 
+    position: fixed; 
+    bottom: 40px; 
+    right: 15%; 
+    color: #e8e8e8; 
+    padding: 10px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-size: 50px; 
+} 
+  
+.scrollbutton:hover { 
+    background-color: --hover-color;
+    color: var(--hover-color)
+    
+     
 }
 
 
