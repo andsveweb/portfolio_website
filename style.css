@@ -10,14 +10,15 @@
 
 :root{
     --text-color: #f5f5f5;
-    --hover-color: #f7f3f3;
+    --hover-color: #69f580;
     --bg-color: #000000;
     --secon-bg-color: #18181a;
     --big-font:1.5rem;
     --normal-font:2rem;
     --h2-font:3rem;
-    
 }
+
+
 
 ::-webkit-scrollbar{
     height: 0;
@@ -33,6 +34,25 @@
     border-radius: 5rem;
 }
 
+.cursor-light {
+    background: radial-gradient(circle, rgba(255, 255, 255, 2) 20%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0) 100%);
+    
+    width: 600px;
+    height: 600px;
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: overlay; /* This can be adjusted based on the effect you want */
+    transition: transform 0.1s ease;
+    transform: translate(-50%, -50%);
+    z-index: 100; /* Adjust as necessary */
+    filter: blur(100px);
+}
+
+
+
+
+  
 body {
     font-family: "Poppins", sans-serif;
     background-color: var(--bg-color);
@@ -112,10 +132,12 @@ span {
 section {
     padding: 50px 10%;
     
+   
+    
 }
 
 .home {
-   padding-top: 120px;
+   padding-top: 100px;
     height: 100%;
     width: 100%;
     display: grid;
@@ -256,7 +278,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-gap: 2em;
 }
 
 .about-content span {
@@ -558,22 +579,18 @@ footer a i{
     opacity: 0;
     transform: scale(.9);
     transition: all 2s;
-}
-.scroll-bottom {
-    opacity: 0;
-    transform: translateY(300px);
-    transition: 3s;
-}
-.scroll-top {
-    opacity: 0;
-    transform: translateY(-300px);
-    transition: 3s;
+    padding-top: 40px;
 }
 
+
+
 .show-items {
-    opacity: 1;
+    opacity: 10;
     transform: translateX(0);
 }
+
+
+
 
 @keyframes morph {
     0%,
