@@ -9,7 +9,7 @@
 }
 
 :root{
-    --text-color: #f5f5f5;
+    --text-color: #979998;
     --hover-color: #69f580;
     --bg-color: #000000;
     --secon-bg-color: #18181a;
@@ -35,7 +35,7 @@
 }
 
 .cursor-light {
-    background: radial-gradient(circle, rgba(255, 255, 255, 2) 20%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0) 100%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0) 100%);
     
     width: 600px;
     height: 600px;
@@ -46,7 +46,7 @@
     transition: transform 0.1s ease;
     transform: translate(-50%, -50%);
     z-index: 100; /* Adjust as necessary */
-    filter: blur(100px);
+    filter: blur(80px);
 }
 
 
@@ -535,9 +535,39 @@ section {
     
 }
 
-.contant form textarea{
-    resize: none;
+.contant {
+   
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    max-width: 600px;
+    margin: 40px auto; 
 }
+.contant input[type="text"],
+.contant input[type="number"],
+.contant textarea {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+.contant textarea {
+    height: 150px; /* Larger height for message field */
+}
+.contant input[type="text"]:focus,
+.contant input[type="number"]:focus,
+.contant textarea:focus {
+    border-color: #69f580; /* Highlight color */
+    outline: none; /* Remove default focus outline */
+}
+
+
+.contant .btn-box .btn:hover {
+    background-color: #57c45e; /* Darker shade for hover state */
+}
+
 
 .formBtn{
     display: flex;
@@ -549,12 +579,17 @@ section {
     font-size: 1rem;
 }
 
-footer{
-    padding: 1.5rem 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+
+
+
+
+footer {
+    display: grid;
+    place-items: center; /* Centers content both horizontally and vertically */
+    height: 100px; /* Example height */
 }
+
 
 footer p{
     color: #bdbdbd;
@@ -580,6 +615,7 @@ footer a i{
     transform: scale(.9);
     transition: all 2s;
     padding-top: 40px;
+    
 }
 
 
